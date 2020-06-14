@@ -1,0 +1,18 @@
+.container-fluid{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+.head{
+    background-image: linear-gradient(black, #263238);
+    width:100%;
+    padding:15px;
+}
+.head h4{
+    color:white;
+}
+.inner-container{
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}

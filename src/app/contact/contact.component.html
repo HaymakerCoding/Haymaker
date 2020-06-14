@@ -1,0 +1,76 @@
+<div class="container-fluid p-0 pb-4 outerContainer">
+
+    <div class="container-fluid">
+  
+      <div class="row">
+  
+        <div style="height: calc(100vh - 150px);" *ngIf="showForm === false">
+          <mat-icon *ngIf="loggedError === false" class="thumb">thumb_up</mat-icon>
+          <mat-icon *ngIf="loggedError === true" class="thumb">thumb_down</mat-icon>
+        </div>
+  
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 formContainer" *ngIf="showForm === true">
+          <h1 class="mb-3">Contact Us</h1>
+          <div style="display:flex; align-items: center;">
+              <mat-icon style="font-size:30px;">email</mat-icon>
+              <a class="ml-3" href="mailto: malcolmroy@haymakercoding.com">info@haymakercoding.com</a>
+          </div>
+  
+          <h2 class="mt-3">Prefer forms? No problem...</h2>
+          
+          <mat-dialog-content>
+            <div *ngIf="sending === true" style="min-width:60vw; min-height: 60vh;">
+              <h4>Sending your request. Please wait.</h4>
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div>
+            <div *ngIf="sending === false">
+              <form [formGroup]="form" (ngSubmit)="send(form.value)">
+                <mat-form-field appearance="outline">
+                  <mat-label>Name</mat-label>
+                  <input matInput required formControlName="name" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('name').hasError('required')">Please enter a name</mat-error>
+                  <mat-error *ngIf="form.get('name').hasError('maxlength')">Name can not exceed 50 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput required formControlName="email" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('email').invalid">Please enter a valid email</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Company</mat-label>
+                  <input matInput formControlName="company" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('company').hasError('maxlength')">Company name can not exceed 50 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Reason for contacting</mat-label>
+                  <mat-select required formControlName="reason">
+                    <mat-option *ngFor="let option of options" [value]="option">
+                      {{ option }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Solution Needed</mat-label>
+                  <mat-select formControlName="solution">
+                    <mat-option *ngFor="let solution of solutions" [value]="solution">
+                      {{ solution }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Details</mat-label>
+                  <textarea matInput formControlName="details" [errorStateMatcher]="matcher"></textarea>
+                  <mat-error *ngIf="form.get('details').hasError('maxlength')">Please keep the details to 300 characters max. We will be happy to go into further details with you later.</mat-error>
+                </mat-form-field>
+                <button mat-raised-button [disabled]="!form.valid" color="accent">Send</button>
+                <button mat-raised-button (click)="close(null)" class="ml-3" type="button" color="accent">Cancel</button>
+              </form>
+            </div>
+          </mat-dialog-content>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  

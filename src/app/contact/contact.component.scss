@@ -1,0 +1,25 @@
+mat-form-field{
+    width:100%;
+}
+button{
+    color:white!important;
+}
+.outerContainer{
+    background-image: url('../../assets/matrix.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+.formContainer{
+    background-color: white;
+    padding:25px;
+    border:1px solid #263238;
+}
+.thumb{
+    color:white;
+    position:absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    transform: translate(-50%,-50%);
+    font-size:120px;
+    text-shadow: #26A69A 0px 0px 4px, #26A69A 0px 0px 4px, #26A69A 0px 0px 4px, #26A69A 0px 0px 4px, #26A69A 0px 0px 4px;
+}

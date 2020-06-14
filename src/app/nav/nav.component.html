@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" style="height:70px;">
+    <mat-toolbar-row class="pl-0 pr-0">
+      <div style="width:100%; display:flex; justify-content: center;">
+        <div class="nav-container pt-3" routerLink="home" [ngClass]="{ active: currentRoute === '/home' || currentRoute === '/' }">
+          <div class="row mx-auto">
+            <div class="col-4 col-md-6 text-right p-0 pt-2 pt-md-0">
+                <span style="font-size:45px; color:#26A69A; line-height:100%;" class="nav-title-H">H</span>
+            </div>
+            <div class="col-8 col-md-6 text-left p-0 pt-2 pt-md-0">
+              <div style="line-height: 100%;" class="nav-title">
+                <span style="color:#26A69A;">aymaker</span><br>
+                <span>Coding</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-container" routerLink="about" [ngClass]="{ active: currentRoute === '/about'}">
+          <mat-icon>info</mat-icon>
+          <div class="nav-container-label">About</div>
+        </div>
+        <div class="nav-container" routerLink="contact" [ngClass]="{ active: currentRoute === '/contact'}">
+          <mat-icon>email</mat-icon><br>
+          <div class="nav-container-label">Contact</div>
+        </div>
+        <div class="nav-container" routerLink="portfolio" [ngClass]="{ active: currentRoute === '/portfolio'}">
+          <mat-icon>work</mat-icon>
+          <div class="nav-container-label">Portfolio</div>
+        </div>
+        <div class="nav-container" routerLink="faq" [ngClass]="{ active: currentRoute === '/faq'}">
+          <mat-icon>question_answer</mat-icon>
+          <div class="nav-container-label">FAQ</div>
+        </div>
+      </div>
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+  
+  

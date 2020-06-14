@@ -1,0 +1,38 @@
+<div class="content container-fluid p-0" style="background-color:#263238;">
+    <div class="container pt-4 pb-4" style="background-color:white;">
+  
+      <h1>FAQ</h1>
+  
+      <mat-list>
+        <p class="questions">What's the difference between a website and web application?</p>
+        <p>A website is content based and mainly for a user to consume information, either static or dynamic from a database. A web application is an interactive web page focused on the user, usually requiring some type of login to authenticate the user's previledges.
+          A website might have web application aspects built in, such as a comment section on a web page.
+        </p>
+      </mat-list>
+      <mat-list>
+        <p class="questions">What is the meant by client side and server side?</p>
+        <p>A web application requires 2 parts. The client runs on a user's device and displays content and accepts user input. The server side code, as you would guess, runs on a server somewhere and is configured to execute when a TCP connection is established between the client and server.
+          It sends the HTML and JavaScript code to the client for processing while processing it's own code. So we would have server code like PHP which would handle security because it's run on the server and can not be viewed or maniuplated by the client. And we would have JavaScript and HTML execute in the client's browser,
+          to give a smooth user interface and handle any manipulation of the document after execution of the server code has completed. A common approach nowadays is to configure a server backend as an API so we have a clear decoupling of code between the client and server.
+          This allows your server code to be resuable if say you wanted to access it via a website and through a native application without having 2 sperate backends. In this instance the client contacts the API, via HTTP requests and the server is only concerned with recieving authentication tokens with requests, the request does not have to come from the same server.
+        </p>
+      </mat-list>
+      <mat-list>
+        <p class="questions">What is a Progressive Web Application?</p>
+        <p>Progressive Web Applications are meant to mimic the look and responsiveness of native applications. This is accomplished by using service workers, which can cache data on a user's device, and adding various icons to match different platforms display formats on homescreens.
+          This is simply an extra layer that you can provide a regular web application with. This extra layer involves setting up caching so that an application can function even offline. Although the data would not be up to date when offline, it can be configured to update whenever the device establishes a connection online. With this extra layer in place a
+          browser can be used to offer the user a native app like experience by allowing the 'installation' of the app, as well as features like push notifications. Progressive Web Application are a good choice for businesses not wanting to invest in a full native application.
+        </p>
+      </mat-list>
+      <mat-list>
+        <p class="questions">How do we secure a web application?</p>
+        <p>To ensure a user is only allowed access to their own information and public information we need to authenticate them. The main way to do this is with a password which is hashed and stored in the database so only the user knows their password. Great, but now how do we avoid asking them for that password every time they change pages? There are 2 ways to do this,
+          statefull or stateless. A statefull authentication system requires storing a session on the server with an ID that corresponds to the user once they have logged in. A stateless authentication means the server does not mainatin a session for the user, but rather we store a token with the client and that token is sent with every server action. In both cases we want theses sessions or
+          tokens to expire at some point. Depending on how sensitive data is the security can be enhanced, its a balance of security VS user experience. For example you only have to log in to your netflix account once on each device but you probably wouldn't want that for your banking account.
+        </p>
+      </mat-list>
+  
+    </div>
+  
+  </div>
+  

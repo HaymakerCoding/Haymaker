@@ -1,0 +1,120 @@
+
+.buttonContainer{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.nav-buttons{
+    width:120px;
+    border:1px solid white;
+    color:white;
+    height:40px;
+    font-size:18px;
+    background-image: linear-gradient(#263238, #26A69A);
+}
+#gamesTitle{
+    font-family: 'Sriracha', cursive;
+    z-index: 2;
+}
+.contact-container{
+    position:absolute; top:15px; right:25px; color:white;
+}
+.contactList .mat-list-item{
+    height:50px;
+    display: flex;
+    justify-content: center;
+}
+.section-dividers {
+    width: 100%;
+	height: 3px;
+    margin: 0;
+	background-image: linear-gradient(to right, #263238, #939393);
+}
+.section-titles{
+    position: relative;
+}
+.section-titles h2{
+    font-family: 'Sriracha', cursive;
+    margin:0;
+}
+.nav-arrows{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.nav-arrows .mat-icon{
+    font-size:34px;
+}
+.contactUs{
+    font-weight:200;
+    margin-top: 5px;
+    font-size:25px;
+    cursor:pointer;
+}
+.third-party-icons{
+    width:40px;
+    cursor:pointer;
+}
+.mail-icon{
+    font-size:50px; color:white; width:50px; margin-bottom: 25px; margin-top: 10px;
+}
+.mail-icon-sm{
+    font-size:50px; color:white; width:50px; margin-bottom: 25px;
+}
+.mat-icon{
+    cursor:pointer;
+}
+.mat-dialog-container{
+    padding:0!important;
+    margin:0!important;
+}
+.section{
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+#topSection{
+    min-height:calc(100vh); 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color:#263238;
+    width:100%;
+    height:calc(100vh - 215px);
+    background-position: center;
+    background-size: cover;
+    background-image: url("/assets/home-lowRes.jpg");
+    position: relative;
+}
+.container-fluid{
+    padding:0;
+}
+#home-background{
+    display:flex; 
+    justify-content: center; 
+    align-items: center
+}
+.fun-btn {
+    position:fixed;
+    bottom:5px;
+    width:180px;
+    left:calc(50% - 90px);
+    font-family: 'Sriracha', cursive;
+    font-size: 18px;
+    color:white;
+    text-shadow: black 0px 0px 1px, black 0px 0px 1px, black 0px 0px 1px;
+}
+.motto{
+    font-family: "Seaweed Script";
+    color:white;
+    font-size:26px;
+}
+
+@media only screen and (max-width:800px) {
+    .contact-container{
+        left:50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+}
+

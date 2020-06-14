@@ -1,0 +1,77 @@
+.nav-container{
+    width:20%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    outline: 0;
+    font-weight:400;
+    max-height: 76px;
+}
+
+.active {
+    border-bottom: 3px solid #26A69A;
+}
+.active .mat-icon, .nav-container:hover .mat-icon{
+    color:#26A69A;
+    text-shadow: white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px, white 0px 0px 1px;
+}
+.active .nav-container-label, .nav-container:hover .nav-container-label {
+    color:#26A69A;
+    letter-spacing: 1.1px;
+}
+.nav-container:hover{
+    border-bottom: 3px solid #26A69A;
+}
+
+.nav-container-label{
+    line-height:20px;
+}
+
+#title span{
+    background-color: white;
+    padding: 0 0.3em;
+}
+#title{
+    position: relative;
+    text-align: center;
+}
+
+.nav-links{
+    text-decoration: none;
+}
+.darkGreen{
+    color:#607D8B;
+}
+
+#title:before{
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    width: calc(100%);
+    border-top: 2px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-container-label{
+        font-size:0.6em;
+    }
+    .nav-container{
+        padding-top:20px!important;
+    }
+    .nav-title{
+        font-size:0.7em!important;
+        line-height: 80%!important;
+    }
+    .nav-title-H{
+        font-size:28px!important;
+        line-height: 12px!important;
+    }
+    .active .nav-container-label, .nav-container:hover .nav-container-label {
+        text-shadow: none!important;   
+    }
+}

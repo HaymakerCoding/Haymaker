@@ -1,0 +1,37 @@
+<div class="container-fluid pt-0">
+    <div class="head">
+      <h4 class="text-center">{{ title }}</h4>
+    </div>
+    <div class="inner-container">
+      <!--Beastly Text-->
+      <div *ngIf="data === 0">
+        <p>
+        A no mercy 2 player fighting tournament, featuring a variety of beasts with different special moves and styles.
+        </p>
+        <p>
+        Go head to head with a friend for species supremecy. Unleashing combos and utilizing random item drops to devaste your hapless foe.
+        Don't be left at the bottom of the food chain.
+        </p>
+        <p>
+          Features unlockable characters and customization options
+        </p>
+      </div>
+  
+      <!--Corporate Takeover-->
+      <div *ngIf="data === 1">
+          <p>While walking to the office one day, you are attacked by a rival company's T-284 Corporate Takeover Bot.
+            Save your company at all costs!</p>
+  
+          <p>Endless runner style featuring boss fights if you can make it to the end of each level.</p>
+      </div>
+  
+      <div *ngIf="data === 2">
+        <p>An alien creature has landed on earth, it appears fairly docile on first contact. But as the sun goes down...</p>
+  
+        <p>Defend against waves of creatures, utiziling tactics and cunning. If you make it through the waves, perhaps you can take the fight to them.</p>
+      </div>
+    </div>
+  
+    <button class="mt-5 mb-2 mx-auto d-block" (click)="close()"  mat-raised-button color="primary">Close</button>
+  </div>
+  

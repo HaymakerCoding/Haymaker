@@ -1,0 +1,58 @@
+img{
+    cursor: pointer;
+}
+.outerContainer{
+    background-color:#263238; min-height:100vh; padding-right: 60px; padding-left: 60px;
+}
+.headers{
+    min-height:60px;
+    display:flex;
+    align-items: center;
+    border-top:2px solid #263238; 
+    padding:10px;
+    border-bottom:2px solid #263238; 
+    width:100%; 
+    background-image: linear-gradient(to right, rgb(57, 117, 111), #26A69A); //(26, 75, 70
+    color: white;
+}
+.headers h3{
+    color:white;
+    margin:0;
+    font-size:20px;
+}
+mat-card{
+    background-color:#455A64;
+}
+.tabRows{
+    width: 100%;
+    padding-top:10px;
+}
+.porfolioImgs{
+    width:100%;
+   
+}
+.demo-list-item{
+    border:1px solid #333;
+    border-radius:6px;
+    padding:15px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    text-decoration: none;;
+}
+
+.demo-list-item:hover{
+    color: #26A69A;
+}
+.demo-section{
+    min-height:500px;
+}
+
+@media only screen and (max-width: 800px) {
+    .outerContainer{
+        padding:0;
+    }
+    .headers h3{
+        font-size:20px;
+    }
+}

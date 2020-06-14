@@ -1,0 +1,48 @@
+.icon-container{
+    display:flex;
+    align-items: center;
+    width:155px;
+    margin:auto;
+}
+section{
+    background-color:#455A64;
+    color:white;
+}
+section .mat-icon{
+    font-size:40px;
+    width:40px;
+    cursor:pointer;
+}
+.name-container{
+    position: relative;
+    min-height:100px;
+    font-size:40px;
+    min-width:200px;
+}
+.name{
+    color:#26A69A;
+    font-weight:500;
+}
+#motto{
+    color:black;
+    font-size: 35px;
+    position: absolute;
+    font-family: 'Sriracha', cursive;
+    left:15%;
+    top:35px;
+}
+.footer-container{
+    width:400;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+a{
+    cursor:pointer;
+}
+.footer-titles{
+    color:#a4b1b8;
+    font-weight:bold;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}

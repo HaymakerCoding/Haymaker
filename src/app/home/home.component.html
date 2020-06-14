@@ -1,0 +1,102 @@
+<link rel="preload" as="image" href="/assets/home-lowRes.jpg">
+<div class="container-fluid mat-typography">
+
+  <section #top id="topSection">
+    <div class="contact-container">
+      <mat-list *ngIf="onPhone === false" class="contactList pt-0">
+        <mat-list-item><mat-icon (click)="openContact()" class="mail-icon">email</mat-icon></mat-list-item>
+        <mat-list-item>
+          <a rel="noopener" target="_blank" href="https://www.facebook.com/haymakerCoding/">
+            <img src="../../assets/icons/f_logo_RGB-Grey_58.png" class="third-party-icons" alt="Haymaker Coding on Facebook">
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a rel="noopener" target="_blank" href="https://github.com/HaymakerCoding">
+            <img src="/assets/icons/GitHub-Mark-Light-64px.png" class="third-party-icons" alt="Haymaker Coding on GitHub">
+          </a>
+        </mat-list-item>
+      </mat-list>
+      <div *ngIf="onPhone === true" style="display: flex; align-items: center; justify-content: center;  margin-top: 10px;">
+        <mat-icon (click)="openContact()" class="mail-icon-sm" >email</mat-icon>
+        <a rel="noopener" target="_blank" href="https://www.facebook.com/haymakerCoding/">
+          <img src="../../assets/icons/f_logo_RGB-Grey_58.png" class="third-party-icons ml-4 mr-4" alt="Haymaker Coding on Facebook">
+        </a>
+        <a rel="noopener" target="_blank" href="https://github.com/HaymakerCoding">
+          <img src="/assets/icons/GitHub-Mark-Light-64px.png" class="third-party-icons" alt="Haymaker Coding on GitHub">
+        </a>
+      </div>
+    </div>
+    <div style="position:absolute; z-index:2; border-top:2px solid white; border-bottom:2px solid white; width:100%; background-color: rgba(0,0,0, 0.5); ">
+      <div class="row mx-auto mt-4" style="width:350px;">
+        <div class="col-4 pr-0 text-right">
+            <span style="font-size:125px!important; color:#26A69A; line-height: 110px;">H</span>
+        </div>
+        <div class="col-7 pl-0">
+            <div style="line-height: 45px; padding-top: 2px;">
+              <span style="color:#26A69A; font-size:50px;">aymaker</span><br>
+              <span style="color:white; font-size:50px; padding-top:0px;">{{ 'Coding' | naturalType }}</span>
+            </div>
+          </div>
+      </div>
+      <h4 class="motto text-center">Knockout Solutions</h4>
+
+      <div class="buttons mt-5 mb-4 buttonContainer">
+        <button (click)="scrollTo(about)" class="nav-buttons" mat-raised-button>About</button>
+        <ul class="ml-4 mr-4" style="padding-left:0;">
+        <li><button (click)="scrollTo(portfolio)" class="nav-buttons" mat-raised-button>Portfolio</button></li>
+        <li>arrow</li>
+        <li><button (click)="scrollToDemos()" class="nav-buttons" mat-raised-button>Demos</button></li>
+        </ul>
+        <button (click)="scrollTo(games)" class="nav-buttons" mat-raised-button>Games</button>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="section-dividers" #about>
+  <div class="pb-4 pt-4 text-center section-titles">
+    <h2>About Haymaker Coding</h2>
+    <div class="nav-arrows">
+      <mat-icon (click)="scrollTo(top)" matTooltip="back to top" matTooltipPosition="left"
+      #tooltip="matTooltip">arrow_drop_up</mat-icon><br>
+      <mat-icon matTooltip="portfolio" matTooltipPosition="left"
+      #tooltip="matTooltip" (click)="scrollTo(portfolio)">arrow_drop_down</mat-icon>
+    </div>
+  </div>
+  <hr class="section-dividers">
+  <section class="section">
+    <app-about (openContact)="openContact()"></app-about>
+  </section>
+
+  <hr class="section-dividers" #portfolio>
+  <div class="pb-4 pt-4 text-center section-titles">
+    <h2>Portfolio</h2>
+    <div class="nav-arrows">
+      <mat-icon matTooltip="about" matTooltipPosition="left"
+      #tooltip="matTooltip" (click)="scrollTo(about)">arrow_drop_up</mat-icon><br>
+      <mat-icon matTooltip="games" matTooltipPosition="left"
+      #tooltip="matTooltip" (click)="scrollTo(games)">arrow_drop_down</mat-icon>
+    </div>
+  </div>
+  <hr class="section-dividers">
+  <section class="section">
+    <app-portfolio></app-portfolio>
+  </section>
+
+  <hr class="section-dividers" #games>
+  <div class="pb-4 pt-4 text-center section-titles">
+    <h2>Games</h2>
+    <div class="nav-arrows">
+      <mat-icon matTooltip="portfolio" matTooltipPosition="left"
+      #tooltip="matTooltip" (click)="scrollTo(portfolio)">arrow_drop_up</mat-icon><br>
+    </div>
+  </div>
+  <hr class="section-dividers">
+  <section class="section">
+    <app-game-list></app-game-list>
+  </section>
+
+  <app-footer  (scrollToAbout)="scrollTo(about)" (scrollToGames)="scrollTo(games)" (scrollToPortfolio)="scrollTo(portfolio)"></app-footer>
+
+
+</div>

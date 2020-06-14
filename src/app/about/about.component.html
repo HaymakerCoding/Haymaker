@@ -1,0 +1,114 @@
+<mat-drawer-container>
+    <mat-drawer #faqContainer [mode]="'over'" class="drawer" position="end">
+      <app-faq></app-faq>
+      <button mat-raised-button color="primary" class="mb-3 ml-3" (click)="faqContainer.toggle()">Close</button>
+    </mat-drawer>
+    <mat-drawer-content>
+      
+      <div class="container-fluid p-0">
+  
+        <div class="text-container">
+  
+          <p>We build software to meet your business needs. You dream it, we build it. By putting our best effort behind each product, we
+            can assure you a knockout application. With the ability to adapt to any technology, we can make your ideas come to life, using the best tools for the job.
+          </p>
+  
+          <p>Nowadays there are many free frameworks available to make awesome applications, such as Angular or React. Created and supported by big players Google and Facebook, respectively, these
+            frameworks allow for resuable components, easy HTTP requests and fast performance. Combine one with a server language like PHP, Node.js, or Python and we can
+            solve any type of problem. Or for bigger projects, if possible licensing fees is not an issue, Microsoft .NET and Java can be used for enterprise grade applications. The bottom
+            line is that any technology you want to use, we can adapt to.
+          </p>
+          <p>
+            Just want to supply the vision and not the technology specs? No problem, leave it to us and we will use the best
+            tools available. Full applications, application updates or small tools, we can supply whatever is needed, big or small.
+          </p>
+        </div>
+      </div>
+      <div class="text-container-mobile">
+        <p>We build software to meet your business needs. You dream it, we build it. By putting our best effort behind each product, we
+          can assure you a knockout application. With the ability to adapt to any technology, we can make your ideas come to life, using the best tools for the job.
+        </p>
+  
+        <p>Nowadays there are many free frameworks available to make awesome applications, such as Angular or React. Created and supported by big players Google and Facebook, respectively, these
+          frameworks allow for resuable components, easy HTTP requests and fast performance. Combine one with a server language like PHP, Node.js, or Python and we can
+          solve any type of problem. Or for bigger projects, if possible licensing fees is not an issue, Microsoft .NET and Java can be used for enterprise grade applications. The bottom
+          line is that any technology you want to use, we can adapt to.
+        </p>
+        <p>
+          Just want to supply the vision and not the technology specs? No problem, leave it to us and we will use the best
+          tools available. Full applications, application updates or small tools, we can supply whatever is needed, big or small.
+        </p>
+      </div>
+      <div class="container text-center p-3 pb-4" style="width:100%; position: relative;">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="mt-4"><u>Some</u> of the business solutions we can provide:</h3>
+            <mat-grid-list cols="1" rowHeight="50px" role="list">
+              <mat-grid-tile role="listitem">
+                Responsive Dynamic Websites
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Adminstrative CRUD Applications
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Authentication Systems (Stateless or Stateful)
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Progressive Web Applications
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Content Management Systems
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                REST APIs
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Native Mobile Applications (iOS or Android)
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Databases (SQL and NoSQL)
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+          <div class="col-12 col-md-6">
+            <h3 class="mt-4">Specialized With:</h3>
+            <mat-icon class="stars">grade</mat-icon>
+            <mat-icon class="stars">grade</mat-icon>
+            <mat-icon class="stars">grade</mat-icon>
+            <mat-icon class="stars">grade</mat-icon>
+            <mat-icon class="stars">grade</mat-icon>
+            <mat-grid-list cols="1" rowHeight="50px" role="list">
+              <mat-grid-tile role="listitem">
+                Angular
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                PHP
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                MySQL
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Bootstrap
+              </mat-grid-tile>
+              <mat-grid-tile role="listitem">
+                Angular Material
+              </mat-grid-tile>
+            </mat-grid-list>
+            <div class="noteBox">
+              <p>These are just the technologies we use most often as well as our recommendations for most web applications. 
+                We can adapt to and have used many other languages/frameworks.</p>
+            </div>
+          </div>
+        </div>
+  
+        <br>
+        <button mat-raised-button color="primary" (click)="faqContainer.toggle()">FAQ</button>
+        <button mat-raised-button color="primary" class="ml-2" (click)="toggleContact()">Request Solution</button>
+        
+      </div>
+  
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  
+  
