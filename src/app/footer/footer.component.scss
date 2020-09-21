@@ -4,11 +4,11 @@
     width:155px;
     margin:auto;
 }
-section{
+footer{
     background-color:#455A64;
     color:white;
 }
-section .mat-icon{
+footer .mat-icon{
     font-size:40px;
     width:40px;
     cursor:pointer;
@@ -22,14 +22,30 @@ section .mat-icon{
 .name{
     color:#26A69A;
     font-weight:500;
+    z-index: 2;
+    position: relative;
 }
+
 #motto{
-    color:black;
     font-size: 35px;
-    position: absolute;
+    color:transparent;
     font-family: 'Sriracha', cursive;
-    left:15%;
-    top:35px;
+    color:#455A64;
+}
+.motto-box {
+    background-color:white;
+    position: absolute;
+    left:13%;
+    top:25px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+    padding-left: 5px;
+    padding-right: 5px;
+    width:400px;
+    border:1px solid #263238;
 }
 .footer-container{
     width:400;
@@ -44,5 +60,8 @@ a{
     color:#a4b1b8;
     font-weight:bold;
     -webkit-font-smoothing: antialiased;
+    letter-spacing: 5px;
+}
+.outlined {
     text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
 }

@@ -1,33 +1,35 @@
 
-<section color="primary">
-    <div class="footer-container pt-4">
-      <div class="text-center name-container">
-        <span class="name">Haymaker</span> Coding &copy;
+<footer color="primary">
+  <div class="footer-container pt-4">
+    <div class="text-center name-container">
+      <span class="name">Haymaker</span> <span class="outlined name" style="color:white;">Coding &copy;</span>
+      <div class="motto-box">
         <span id="motto">Knockout Software</span>
       </div>
     </div>
-  
-    <div class="row pb-5">
-      <div class="col-6 text-center">
-        <h4 class="footer-titles">Haymaker</h4>
-          <a (click)="scrollToA()">About</a>
-          <span class="ml-2 mr-2">|</span>
-          <a (click)="scrollToP()">Portofolio</a>
-          <span class="ml-2 mr-2">|</span>
-          <a (click)="scrollToG()">Games</a>
+  </div>
+
+  <div class="row pb-5">
+    <nav class="col-6 text-center">
+      <h4 class="footer-titles outlined">Haymaker</h4>
+        <a (click)="scrollToA()">About</a>
+        <span class="ml-2 mr-2">|</span>
+        <a (click)="scrollToP()">Portofolio</a>
+        <span class="ml-2 mr-2">|</span>
+        <a (click)="scrollToG()">Games</a>
+    </nav>
+    <aside class="col-6 text-center">
+      <h4 class="footer-titles">Contact</h4>
+      <div class="icon-container">
+        <mat-icon (click)="openContact()" class="mail-icon mb-3">email</mat-icon>
+        <a rel="noopener" target="_blank" href="https://www.facebook.com/haymakerCoding/" class="ml-3 mr-3">
+          <img src="../../assets/icons/f_logo_RGB-Grey_58.png" class="mt-2 mb-2" style="width:40px;" alt="Haymaker Coding on Facebook">
+        </a>
+        <a rel="noopener" target="_blank" href="https://github.com/HaymakerCoding">
+          <img src="/assets/icons/GitHub-Mark-Light-64px.png" style="width:40px;" class="third-party-icons" alt="Haymaker Coding on GitHub">
+        </a>
       </div>
-      <div class="col-6 text-center">
-        <h4 class="footer-titles">Contact</h4>
-        <div class="icon-container">
-          <mat-icon (click)="openContact()" class="mail-icon mb-3">email</mat-icon>
-          <a rel="noopener" target="_blank" href="https://www.facebook.com/haymakerCoding/" class="ml-3 mr-3">
-            <img src="../../assets/icons/f_logo_RGB-Grey_58.png" class="mt-2 mb-2" style="width:40px;" alt="Haymaker Coding on Facebook">
-          </a>
-          <a rel="noopener" target="_blank" href="https://github.com/HaymakerCoding">
-            <img src="/assets/icons/GitHub-Mark-Light-64px.png" style="width:40px;" class="third-party-icons" alt="Haymaker Coding on GitHub">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </aside>
+  </div>
+</footer>
   
