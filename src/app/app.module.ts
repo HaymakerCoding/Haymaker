@@ -92,7 +92,7 @@ const appRoutes: Routes = [
     MatTooltipModule,
     RouterModule.forRoot(
       appRoutes,
-      { useHash: true }
+      { useHash: true, relativeLinkResolution: 'legacy' }
     ),
   ],
   entryComponents: [ GameDetailsComponent] ,
